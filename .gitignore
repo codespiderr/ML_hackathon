@@ -28,8 +28,14 @@ extracted_guidelines.txt
 self/
 *.zip
 
-# Supplied trip data and generated candidate archives
-Student folder/
+# Only the supplied development splits belong in the repository
+/Student folder/*
+!/Student folder/Student folder/
+/Student folder/Student folder/*
+!/Student folder/Student folder/train/
+!/Student folder/Student folder/student_test/
+
+# Generated candidate archives
 results/preprocessing/**/*.npz
 
 # Keep models directory structure but exclude excessively large temporary weights

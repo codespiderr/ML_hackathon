@@ -73,11 +73,14 @@ pip install -r requirements.txt
    ```bash
    python -m src.data_processing.prepare
    ```
-   The default input is `Student folder/Student folder` inside this checkout.
-   Use `--data` to point at another copy. Each split writes one candidate archive
-   per trip and a JSON summary under `results/preprocessing/`. For a quick check:
+   The checkout includes the 80 training trips and 10 student-test trips in
+   `Student folder/Student folder`. Each trip has its original `.track`,
+   `.nodes`, `.arcs`, and `.route` files. The reserved evaluator trips are
+   supplied separately. Each processed split writes one candidate archive per
+   trip and a JSON summary under `results/preprocessing/`. Use `--data` to
+   point at a different copy. For a quick check:
    ```powershell
-   python -m src.data_processing.prepare --data "../Student folder/Student folder" --split train --trip 00000001
+   python -m src.data_processing.prepare --split train --trip 00000001
    ```
    See [the preprocessing handoff](docs/preprocessing.md) for file shapes and
    alignment assumptions. The following stages are planned in the repository scaffold.
