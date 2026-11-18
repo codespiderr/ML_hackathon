@@ -1,0 +1,6 @@
+model,fold,top1,macro_f1,logloss,route_continuity,candidate_recall,fit_s,infer_s,config,seed
+logreg,student_test,0.839718,0.896219,0.099673,0.914665,0.9988,6.06,0.09,"{""C"": 1.0, ""family"": ""linear"", ""max_iter"": 500, ""n_train_fixes"": 208417, ""scaler"": ""standard""}",42
+knn,student_test,0.83904,0.905847,0.099427,0.913464,0.9988,5.09,27.97,"{""family"": ""instance"", ""k"": 25, ""n_train_fixes"": 40000, ""scaler"": ""standard"", ""weights"": ""distance""}",42
+rf,student_test,0.847234,0.913325,0.065222,0.922551,0.9988,32.13,0.88,"{""family"": ""bagging"", ""max_depth"": 20, ""max_samples"": 0.3, ""min_samples_leaf"": 20, ""n_estimators"": 100, ""n_train_fixes"": 60000}",42
+hgb,student_test,0.849322,0.915429,0.066568,0.919313,0.9988,61.89,3.05,"{""early_stopping"": false, ""family"": ""boosting"", ""learning_rate"": 0.1, ""max_iter"": 200, ""n_train_fixes"": 208417}",42
+mlp,student_test,0.843424,0.91095,0.068948,0.921349,0.9988,68.8,0.21,"{""batch_size"": 1024, ""early_stopping"": true, ""family"": ""neural"", ""hidden"": [64, 32], ""max_iter"": 40, ""n_iter_no_change"": 5, ""n_train_fixes"": 60000, ""scaler"": ""standard""}",42

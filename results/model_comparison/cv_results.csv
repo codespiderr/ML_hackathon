@@ -1,0 +1,26 @@
+model,fold,top1,macro_f1,logloss,route_continuity,candidate_recall,fit_s,infer_s,config,seed
+logreg,0,0.454236,0.762372,0.290672,0.870713,0.764366,7.36,0.19,"{""C"": 1.0, ""family"": ""linear"", ""max_iter"": 500, ""n_train_fixes"": 166670, ""scaler"": ""standard""}",42
+logreg,1,0.796042,0.86717,0.111214,0.921847,0.994202,4.85,0.2,"{""C"": 1.0, ""family"": ""linear"", ""max_iter"": 500, ""n_train_fixes"": 166678, ""scaler"": ""standard""}",42
+logreg,2,0.822532,0.877242,0.099698,0.919314,0.99976,4.48,0.24,"{""C"": 1.0, ""family"": ""linear"", ""max_iter"": 500, ""n_train_fixes"": 166680, ""scaler"": ""standard""}",42
+logreg,3,0.787092,0.896344,0.098084,0.911375,0.903421,5.72,0.17,"{""C"": 1.0, ""family"": ""linear"", ""max_iter"": 500, ""n_train_fixes"": 167000, ""scaler"": ""standard""}",42
+logreg,4,0.818393,0.892793,0.103548,0.918704,0.978122,4.29,0.18,"{""C"": 1.0, ""family"": ""linear"", ""max_iter"": 500, ""n_train_fixes"": 166640, ""scaler"": ""standard""}",42
+mlp,0,0.461518,0.821577,0.192698,0.882218,0.764366,95.1,0.52,"{""batch_size"": 1024, ""early_stopping"": true, ""family"": ""neural"", ""hidden"": [64, 32], ""max_iter"": 40, ""n_iter_no_change"": 5, ""n_train_fixes"": 60000, ""scaler"": ""standard""}",42
+mlp,1,0.807925,0.885458,0.085118,0.935492,0.994202,134.03,0.51,"{""batch_size"": 1024, ""early_stopping"": true, ""family"": ""neural"", ""hidden"": [64, 32], ""max_iter"": 40, ""n_iter_no_change"": 5, ""n_train_fixes"": 60000, ""scaler"": ""standard""}",42
+mlp,2,0.832451,0.897319,0.070534,0.934516,0.99976,165.36,0.38,"{""batch_size"": 1024, ""early_stopping"": true, ""family"": ""neural"", ""hidden"": [64, 32], ""max_iter"": 40, ""n_iter_no_change"": 5, ""n_train_fixes"": 60000, ""scaler"": ""standard""}",42
+mlp,3,0.796098,0.921467,0.058088,0.924433,0.903421,131.69,0.27,"{""batch_size"": 1024, ""early_stopping"": true, ""family"": ""neural"", ""hidden"": [64, 32], ""max_iter"": 40, ""n_iter_no_change"": 5, ""n_train_fixes"": 60000, ""scaler"": ""standard""}",42
+mlp,4,0.826053,0.908598,0.068791,0.923162,0.978122,45.8,0.25,"{""batch_size"": 1024, ""early_stopping"": true, ""family"": ""neural"", ""hidden"": [64, 32], ""max_iter"": 40, ""n_iter_no_change"": 5, ""n_train_fixes"": 60000, ""scaler"": ""standard""}",42
+knn,0,0.450044,0.808929,0.305613,0.840872,0.764366,1.82,34.99,"{""family"": ""instance"", ""k"": 25, ""n_train_fixes"": 40000, ""scaler"": ""standard"", ""weights"": ""distance""}",42
+knn,1,0.796521,0.883626,0.122409,0.924341,0.994202,1.87,30.72,"{""family"": ""instance"", ""k"": 25, ""n_train_fixes"": 40000, ""scaler"": ""standard"", ""weights"": ""distance""}",42
+knn,2,0.815631,0.892099,0.107084,0.918763,0.99976,1.87,28.59,"{""family"": ""instance"", ""k"": 25, ""n_train_fixes"": 40000, ""scaler"": ""standard"", ""weights"": ""distance""}",42
+knn,3,0.784219,0.912276,0.08504,0.909513,0.903421,1.9,25.77,"{""family"": ""instance"", ""k"": 25, ""n_train_fixes"": 40000, ""scaler"": ""standard"", ""weights"": ""distance""}",42
+knn,4,0.814683,0.900666,0.101484,0.911777,0.978122,1.92,31.22,"{""family"": ""instance"", ""k"": 25, ""n_train_fixes"": 40000, ""scaler"": ""standard"", ""weights"": ""distance""}",42
+rf,0,0.459195,0.816215,0.202074,0.885118,0.764366,20.08,1.01,"{""family"": ""bagging"", ""max_depth"": 20, ""max_samples"": 0.3, ""min_samples_leaf"": 20, ""n_estimators"": 100, ""n_train_fixes"": 60000}",42
+rf,1,0.806751,0.88694,0.081261,0.934988,0.994202,19.58,0.93,"{""family"": ""bagging"", ""max_depth"": 20, ""max_samples"": 0.3, ""min_samples_leaf"": 20, ""n_estimators"": 100, ""n_train_fixes"": 60000}",42
+rf,2,0.834535,0.898413,0.068564,0.932742,0.99976,20.67,1.06,"{""family"": ""bagging"", ""max_depth"": 20, ""max_samples"": 0.3, ""min_samples_leaf"": 20, ""n_estimators"": 100, ""n_train_fixes"": 60000}",42
+rf,3,0.795398,0.921583,0.05705,0.926416,0.903421,20.11,1.06,"{""family"": ""bagging"", ""max_depth"": 20, ""max_samples"": 0.3, ""min_samples_leaf"": 20, ""n_estimators"": 100, ""n_train_fixes"": 60000}",42
+rf,4,0.825406,0.909543,0.065545,0.92738,0.978122,19.19,1.06,"{""family"": ""bagging"", ""max_depth"": 20, ""max_samples"": 0.3, ""min_samples_leaf"": 20, ""n_estimators"": 100, ""n_train_fixes"": 60000}",42
+hgb,0,0.460081,0.804917,0.305934,0.806428,0.764366,19.89,2.29,"{""early_stopping"": false, ""family"": ""boosting"", ""learning_rate"": 0.1, ""max_iter"": 200, ""n_train_fixes"": 166670}",42
+hgb,1,0.79954,0.888789,0.096175,0.92211,0.994202,18.55,2.49,"{""early_stopping"": false, ""family"": ""boosting"", ""learning_rate"": 0.1, ""max_iter"": 200, ""n_train_fixes"": 166678}",42
+hgb,2,0.833577,0.904364,0.070207,0.926316,0.99976,20.19,3.22,"{""early_stopping"": false, ""family"": ""boosting"", ""learning_rate"": 0.1, ""max_iter"": 200, ""n_train_fixes"": 166680}",42
+hgb,3,0.79675,0.92395,0.057128,0.921942,0.903421,23.57,3.02,"{""early_stopping"": false, ""family"": ""boosting"", ""learning_rate"": 0.1, ""max_iter"": 200, ""n_train_fixes"": 167000}",42
+hgb,4,0.826172,0.909538,0.072411,0.920334,0.978122,22.69,2.94,"{""early_stopping"": false, ""family"": ""boosting"", ""learning_rate"": 0.1, ""max_iter"": 200, ""n_train_fixes"": 166640}",42
