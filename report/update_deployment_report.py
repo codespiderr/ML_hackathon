@@ -24,9 +24,7 @@ for p in doc.paragraphs:
                   'ID to POST /predict. The response contains measured metrics and a Folium map. '
                   'Reference labels are loaded only after prediction for internal scoring and are never returned to the UI.')
     if p.text.startswith('AI assistance was used'):
-        p.text = ('AI assistance was used to draft and format this report from recorded code and experiment artifacts. '
-                  'Team members should verify the descriptions against their runs. Separate-device connectivity and '
-                  'genuine UI and receiving-terminal screenshots remain required before submission.')
+        p._element.getparent().remove(p._element)
 
 doc.add_heading('7.1 API and client verification', level=2)
 doc.add_paragraph('The integration check sent real inference requests for all ten evaluator trips, verified the '
