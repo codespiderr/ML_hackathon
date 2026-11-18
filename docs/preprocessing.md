@@ -17,8 +17,10 @@ turns that row into candidate road segments the classifier can compare.
    align the ordered reference route to the GPS fixes to determine which
    candidate should be labelled as the match.
 
-Run `python -m src.data_processing.prepare` from the repository root to
-reproduce the per-trip archives.
+The baseline archives are included in `results/preprocessing/train/` and
+`results/preprocessing/student_test/`. Run
+`python -m src.data_processing.prepare --output scratch/preprocessing`
+from the repository root to reproduce them in a separate directory.
 
 ## Model handoff
 
