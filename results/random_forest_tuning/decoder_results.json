@@ -1,0 +1,154 @@
+{
+  "tuning_split": "two held-out training trips",
+  "trials": [
+    {
+      "settings": {
+        "distance_scale": 20.0,
+        "disconnect_penalty": 4.0
+      },
+      "top1": 0.5790833907649897,
+      "continuity": 0.9291623578076526
+    },
+    {
+      "settings": {
+        "distance_scale": 20.0,
+        "disconnect_penalty": 8.0
+      },
+      "top1": 0.5323914541695383,
+      "continuity": 0.9472595656670114
+    },
+    {
+      "settings": {
+        "distance_scale": 50.0,
+        "disconnect_penalty": 4.0
+      },
+      "top1": 0.5899379738111648,
+      "continuity": 0.9245087900723888
+    },
+    {
+      "settings": {
+        "distance_scale": 50.0,
+        "disconnect_penalty": 8.0
+      },
+      "top1": 0.5480702963473466,
+      "continuity": 0.9424336435711823
+    }
+  ],
+  "selected": {
+    "settings": {
+      "distance_scale": 50.0,
+      "disconnect_penalty": 4.0
+    },
+    "top1": 0.5899379738111648,
+    "continuity": 0.9245087900723888
+  },
+  "student_test": {
+    "raw_top1": 0.8506263048016701,
+    "decoded_top1": 0.8660751565762004,
+    "raw_continuity": 0.9223939837058701,
+    "decoded_continuity": 0.9664194693962816,
+    "worse_trips": 3,
+    "trips": [
+      {
+        "trip_id": "00000000",
+        "observations": 2503,
+        "raw_top1": 0.9348781462245306,
+        "decoded_top1": 0.9488613663603676,
+        "raw_continuity": 0.9584332533972821,
+        "decoded_continuity": 0.9856115107913669,
+        "raw_transition_f1": 0.6533333333333333,
+        "decoded_transition_f1": 0.8123393316195373
+      },
+      {
+        "trip_id": "00000007",
+        "observations": 1354,
+        "raw_top1": 0.9290989660265879,
+        "decoded_top1": 0.9283604135893648,
+        "raw_continuity": 0.9933481152993349,
+        "decoded_continuity": 0.9970436067997044,
+        "raw_transition_f1": 0.9176470588235294,
+        "decoded_transition_f1": 0.952
+      },
+      {
+        "trip_id": "00000009",
+        "observations": 1049,
+        "raw_top1": 0.8331744518589133,
+        "decoded_top1": 0.86558627264061,
+        "raw_continuity": 0.8759541984732825,
+        "decoded_continuity": 0.9351145038167938,
+        "raw_transition_f1": 0.6400911161731208,
+        "decoded_transition_f1": 0.720763723150358
+      },
+      {
+        "trip_id": "00000040",
+        "observations": 2995,
+        "raw_top1": 0.9151919866444074,
+        "decoded_top1": 0.9141903171953255,
+        "raw_continuity": 0.9632598530394122,
+        "decoded_continuity": 0.978623914495658,
+        "raw_transition_f1": 0.7095890410958904,
+        "decoded_transition_f1": 0.7885714285714286
+      },
+      {
+        "trip_id": "00000052",
+        "observations": 262,
+        "raw_top1": 0.9465648854961832,
+        "decoded_top1": 0.9694656488549618,
+        "raw_continuity": 0.9425287356321839,
+        "decoded_continuity": 0.9616858237547893,
+        "raw_transition_f1": 0.6888888888888889,
+        "decoded_transition_f1": 0.7701149425287356
+      },
+      {
+        "trip_id": "00000056",
+        "observations": 3958,
+        "raw_top1": 0.875189489641233,
+        "decoded_top1": 0.9080343607882769,
+        "raw_continuity": 0.8870356330553449,
+        "decoded_continuity": 0.9575435936315391,
+        "raw_transition_f1": 0.6727430555555556,
+        "decoded_transition_f1": 0.796838679683868
+      },
+      {
+        "trip_id": "00000065",
+        "observations": 768,
+        "raw_top1": 0.85546875,
+        "decoded_top1": 0.8489583333333334,
+        "raw_continuity": 0.9138381201044387,
+        "decoded_continuity": 0.9634464751958225,
+        "raw_transition_f1": 0.592814371257485,
+        "decoded_transition_f1": 0.7284345047923323
+      },
+      {
+        "trip_id": "00000076",
+        "observations": 1486,
+        "raw_top1": 0.8566621803499327,
+        "decoded_top1": 0.8896366083445492,
+        "raw_continuity": 0.878032345013477,
+        "decoded_continuity": 0.9474393530997305,
+        "raw_transition_f1": 0.5248554913294797,
+        "decoded_transition_f1": 0.6641697877652933
+      },
+      {
+        "trip_id": "00000077",
+        "observations": 3911,
+        "raw_top1": 0.693684479672718,
+        "decoded_top1": 0.704167732037842,
+        "raw_continuity": 0.919693094629156,
+        "decoded_continuity": 0.9672634271099744,
+        "raw_transition_f1": 0.4752252252252252,
+        "decoded_transition_f1": 0.5816326530612245
+      },
+      {
+        "trip_id": "00000091",
+        "observations": 874,
+        "raw_top1": 0.8352402745995423,
+        "decoded_top1": 0.8466819221967964,
+        "raw_continuity": 0.8739977090492554,
+        "decoded_continuity": 0.9324169530355098,
+        "raw_transition_f1": 0.5621181262729125,
+        "decoded_transition_f1": 0.6608695652173913
+      }
+    ]
+  }
+}

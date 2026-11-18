@@ -91,5 +91,31 @@ record the per-trip diagnostics.
 
 Training trips `00000033` and `00000054` account for about 91% of training
 candidate misses. For missed fixes in those trips, the median distance to
-the nearest reference arc was about 133 m and 166 m, respectively. The
-training-only candidate count sweep and grouped model training are pending.
+the nearest reference arc was about 133 m and 166 m, respectively.
+
+## Training-only candidate sweep
+
+Run `python -m src.visualization.candidate_sweep` from the repository root
+with the 12-candidate training archives available. The script tests ten
+values from K=1 to K=64 using the same aligned labels across all 80 training
+trips. Candidate rows measure how much data the classifier would receive.
+The sweep used no student-test or reserved evaluator trips.
+
+| K | Training candidate recall | Candidate rows |
+| ---: | ---: | ---: |
+| 12 | 92.80% | 2,501,004 |
+| 24 | 94.53% | 5,002,008 |
+| 32 | 96.06% | 6,669,344 |
+| 48 | 97.26% | 10,004,016 |
+| 64 | 98.45% | 13,338,688 |
+
+The selection rule is the smallest K within 0.5 percentage points of the
+best tested recall. It selects **K=64**, which is the upper edge of the sweep
+and produces 5.33 times as many rows as K=12. **K=32** is a lower-cost option
+with 96.06% recall and half as many rows as K=64. The published 12-candidate
+archives remain the reproducible baseline for model comparison.
+
+Distances to the aligned reference arcs had a median of 5.69 m and a 95th
+percentile of 141.05 m. The distances and recall use estimated per-fix labels.
+See the [trade-off plot](../results/baseline/preprocessing/candidate_sweep.png)
+and [full sweep results](../results/baseline/preprocessing/candidate_sweep.json).

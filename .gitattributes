@@ -1,1 +1,5 @@
 "Student folder/Student folder/**" -text
+*.pdf binary
+*.joblib binary
+*.sqlite3 binary
+*.png binary

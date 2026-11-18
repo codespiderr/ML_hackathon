@@ -1,0 +1,129 @@
+{
+  "selection_metric": "mean trip-grouped CV observation Top-1",
+  "search_cap_fixes": 12000,
+  "final_cap_fixes": 60000,
+  "best_cv_top1": 0.745640936615918,
+  "best_params": {
+    "n_estimators": 200,
+    "max_depth": 10,
+    "min_samples_leaf": 6,
+    "max_features": 0.8143936104763001,
+    "max_samples": 0.6501523698721767
+  },
+  "calibration_fold": 0,
+  "calibration_logloss": {
+    "raw": 0.18257592106582368,
+    "calibrated": 0.13531962825059246
+  },
+  "calibration_used": false,
+  "cv_same_cap": {
+    "untuned": [
+      {
+        "top1": 0.45888327304956045,
+        "candidate_recall": 0.764366301770187,
+        "macro_f1": 0.8150880361313306,
+        "logloss": 0.1863368783972048,
+        "route_continuity": 0.8778313079744013
+      },
+      {
+        "top1": 0.8070868971465536,
+        "candidate_recall": 0.9942020652147872,
+        "macro_f1": 0.8875775866263262,
+        "logloss": 0.08166293670099596,
+        "route_continuity": 0.9342446043165468
+      },
+      {
+        "top1": 0.8357332822196133,
+        "candidate_recall": 0.9997604044373098,
+        "macro_f1": 0.899226127897345,
+        "logloss": 0.0684929547771655,
+        "route_continuity": 0.9335811053830476
+      },
+      {
+        "top1": 0.7958326291136489,
+        "candidate_recall": 0.9034213004321897,
+        "macro_f1": 0.9213878434887721,
+        "logloss": 0.05737877713103772,
+        "route_continuity": 0.9270203607873483
+      },
+      {
+        "top1": 0.8247600354261915,
+        "candidate_recall": 0.9781219331210953,
+        "macro_f1": 0.9087909664411569,
+        "logloss": 0.06620067341076341,
+        "route_continuity": 0.9252228932988208
+      }
+    ],
+    "tuned": [
+      {
+        "top1": 0.4610630704002683,
+        "candidate_recall": 0.764366301770187,
+        "macro_f1": 0.8054198623395912,
+        "logloss": 0.18257592106582368,
+        "route_continuity": 0.8867237122791879
+      },
+      {
+        "top1": 0.8070150219219435,
+        "candidate_recall": 0.9942020652147872,
+        "macro_f1": 0.8910911436286084,
+        "logloss": 0.08210234740709259,
+        "route_continuity": 0.9338609112709833
+      },
+      {
+        "top1": 0.8370510578144092,
+        "candidate_recall": 0.9997604044373098,
+        "macro_f1": 0.8994186782899887,
+        "logloss": 0.06683985760968385,
+        "route_continuity": 0.9338208847859969
+      },
+      {
+        "top1": 0.7975469010309776,
+        "candidate_recall": 0.9034213004321897,
+        "macro_f1": 0.9246124177169517,
+        "logloss": 0.05506283433625768,
+        "route_continuity": 0.9265367316341829
+      },
+      {
+        "top1": 0.8284462742657444,
+        "candidate_recall": 0.9781219331210953,
+        "macro_f1": 0.9112318781123947,
+        "logloss": 0.06477420625342374,
+        "route_continuity": 0.9271881890518646
+      }
+    ]
+  },
+  "student_test": {
+    "untuned": {
+      "top1": 0.8486951983298539,
+      "candidate_recall": 0.9987995824634656,
+      "macro_f1": 0.9130723908025078,
+      "logloss": 0.06546785293122094,
+      "route_continuity": 0.9220284102778358,
+      "inference_seconds": 0.16938049998134375
+    },
+    "tuned_raw": {
+      "top1": 0.8506263048016701,
+      "candidate_recall": 0.9987995824634656,
+      "macro_f1": 0.9154367411054887,
+      "logloss": 0.06408104144627101,
+      "route_continuity": 0.9223939837058701,
+      "inference_seconds": 0.2922240999760106
+    },
+    "tuned_calibrated": {
+      "top1": 0.8477035490605428,
+      "candidate_recall": 0.9987995824634656,
+      "macro_f1": 0.9069745241298746,
+      "logloss": 0.08265151501654995,
+      "route_continuity": 0.9199394192604972,
+      "inference_seconds": 0.27639060001820326
+    },
+    "tuned_final": {
+      "top1": 0.8506263048016701,
+      "candidate_recall": 0.9987995824634656,
+      "macro_f1": 0.9154367411054887,
+      "logloss": 0.06408104144627101,
+      "route_continuity": 0.9223939837058701,
+      "inference_seconds": 0.2922240999760106
+    }
+  }
+}

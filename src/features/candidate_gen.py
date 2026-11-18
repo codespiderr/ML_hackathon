@@ -39,13 +39,16 @@ def _rank_arcs(geometry: Geometry, points: np.ndarray, arc_ids: np.ndarray, coun
     return arc_ids[order], furthest
 
 
-def nearest_arcs(geometry: Geometry, count: int, cell_size: float = 100) -> np.ndarray:
+def nearest_arcs(
+    geometry: Geometry, count: int, cell_size: float = 100, *, points: np.ndarray | None = None,
+) -> np.ndarray:
     """Look in nearby cells first and fall back to the full graph as needed."""
+    gps_points = geometry.gps if points is None else points
     cells, long_arcs = _index_arcs(geometry, cell_size)
     observations = defaultdict(list)
-    for index, cell in enumerate(np.floor(geometry.gps / cell_size).astype(int)):
+    for index, cell in enumerate(np.floor(gps_points / cell_size).astype(int)):
         observations[tuple(cell)].append(index)
-    nearest = np.empty((len(geometry.gps), count), dtype=np.int32)
+    nearest = np.empty((len(gps_points), count), dtype=np.int32)
     all_arcs = np.arange(len(geometry.start))
 
     for (x, y), indices in observations.items():
@@ -70,14 +73,16 @@ def nearest_arcs(geometry: Geometry, count: int, cell_size: float = 100) -> np.n
             batch_size = max(1, 200_000 // len(arc_ids))
             for batch_start in range(0, len(pending), batch_size):
                 batch = pending[batch_start:batch_start + batch_size]
-                points = geometry.gps[batch]
-                ranked_ids, furthest = _rank_arcs(geometry, points, arc_ids, count)
+                batch_points = gps_points[batch]
+                ranked_ids, furthest = _rank_arcs(geometry, batch_points, arc_ids, count)
                 if use_full_graph:
                     nearest[batch] = ranked_ids
                     continue
 
                 # An unsearched segment cannot be closer than the window's edge.
-                edge_distance = np.minimum(points - lower_edge, upper_edge - points).min(axis=1)
+                edge_distance = np.minimum(
+                    batch_points - lower_edge, upper_edge - batch_points,
+                ).min(axis=1)
                 done = furthest < edge_distance
                 nearest[batch[done]] = ranked_ids[done]
                 remaining.extend(batch[~done])
