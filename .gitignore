@@ -35,8 +35,8 @@ self/
 !/Student folder/Student folder/train/
 !/Student folder/Student folder/student_test/
 
-# Generated candidate archives
-results/preprocessing/**/*.npz
+# Preprocessing outputs regenerated from the supplied trips
+/results/preprocessing/
 
 # Keep models directory structure but exclude excessively large temporary weights
 saved_models/*.tmp

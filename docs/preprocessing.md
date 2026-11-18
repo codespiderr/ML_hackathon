@@ -1,5 +1,25 @@
 # PathSnap preprocessing handoff
 
+## What preprocessing did
+
+Each raw GPS row gives a location and a timestamp. The preprocessing pipeline
+turns that row into candidate road segments the classifier can compare.
+
+1. **Validate each trip.** Check input columns, coordinates, node IDs, and
+   timestamps. The supplied files passed validation, so no values needed
+   filling. Keep irregular observations and split the track at gaps over
+   30 seconds.
+2. **Prepare the road candidates.** Convert longitude and latitude to local
+   metres, join road nodes into directed segments, and find the 12 segments
+   closest to each GPS fix.
+3. **Create features and labels.** Calculate eight measurements for each
+   candidate, including distance, heading agreement, and speed. Separately,
+   align the ordered reference route to the GPS fixes to determine which
+   candidate should be labelled as the match.
+
+Run `python -m src.data_processing.prepare` from the repository root to
+reproduce the per-trip archives.
+
 ## Model handoff
 
 ```python
@@ -57,7 +77,10 @@ the feature tensor as model input.
 
 ## Baseline results
 
-The initial preprocessing run used 12 candidate arcs and a 30-second gap threshold.
+The full run used 12 candidate arcs and a 30-second gap threshold.
+The [training summary](../results/baseline/preprocessing/train.json) and
+[student-test summary](../results/baseline/preprocessing/student_test.json)
+record the per-trip diagnostics.
 
 | Split | Trips | GPS observations | Candidate recall | Nearest-arc Top-1 |
 | --- | ---: | ---: | ---: | ---: |

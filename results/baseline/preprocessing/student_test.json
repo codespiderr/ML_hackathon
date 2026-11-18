@@ -1,0 +1,353 @@
+{
+  "split": "student_test",
+  "trip_count": 10,
+  "observations": 19160,
+  "candidate_count": 12,
+  "gap_seconds": 30,
+  "candidate_recall": 0.9987995824634656,
+  "nearest_arc_top1": 0.5347599164926932,
+  "alignment_distance_over_50m": 27,
+  "elapsed_seconds": 11.85,
+  "trips": [
+    {
+      "trip_id": "00000000",
+      "observations": 2503,
+      "nodes": 8542,
+      "arcs": 18196,
+      "reference_arcs": 179,
+      "raw_file_bytes": {
+        "track": 81492,
+        "nodes": 170840,
+        "arcs": 176989,
+        "route": 881
+      },
+      "gps_min_lon_lat": [
+        54.248491,
+        56.08056
+      ],
+      "gps_max_lon_lat": [
+        54.963519,
+        56.254566
+      ],
+      "weak_components": 100,
+      "isolated_nodes": 0,
+      "zero_length_arcs": 0,
+      "noncontiguous_reference_hops": 0,
+      "gps_blocks": 1,
+      "max_gap_seconds": 2.0,
+      "one_second_steps": 2501,
+      "candidate_hits": 2500,
+      "nearest_arc_hits": 1225,
+      "candidate_miss_rate": 0.001198561725928915,
+      "alignment_distance_m_p50": 6.068406977877819,
+      "alignment_distance_m_p95": 16.6262098327083,
+      "alignment_distance_over_50m": 0
+    },
+    {
+      "trip_id": "00000007",
+      "observations": 1354,
+      "nodes": 2061,
+      "arcs": 4369,
+      "reference_arcs": 123,
+      "raw_file_bytes": {
+        "track": 43575,
+        "nodes": 41220,
+        "arcs": 38998,
+        "route": 486
+      },
+      "gps_min_lon_lat": [
+        77.122052,
+        43.388762
+      ],
+      "gps_max_lon_lat": [
+        77.271115,
+        43.496413
+      ],
+      "weak_components": 6,
+      "isolated_nodes": 0,
+      "zero_length_arcs": 0,
+      "noncontiguous_reference_hops": 0,
+      "gps_blocks": 1,
+      "max_gap_seconds": 1.0,
+      "one_second_steps": 1353,
+      "candidate_hits": 1354,
+      "nearest_arc_hits": 626,
+      "candidate_miss_rate": 0.0,
+      "alignment_distance_m_p50": 4.511821880739486,
+      "alignment_distance_m_p95": 26.13120063101236,
+      "alignment_distance_over_50m": 0
+    },
+    {
+      "trip_id": "00000009",
+      "observations": 1049,
+      "nodes": 6745,
+      "arcs": 13106,
+      "reference_arcs": 429,
+      "raw_file_bytes": {
+        "track": 33513,
+        "nodes": 134900,
+        "arcs": 126694,
+        "route": 2217
+      },
+      "gps_min_lon_lat": [
+        13.631991,
+        42.645529
+      ],
+      "gps_max_lon_lat": [
+        13.70662,
+        42.662443
+      ],
+      "weak_components": 8,
+      "isolated_nodes": 0,
+      "zero_length_arcs": 2,
+      "noncontiguous_reference_hops": 0,
+      "gps_blocks": 1,
+      "max_gap_seconds": 2.0,
+      "one_second_steps": 1047,
+      "candidate_hits": 1042,
+      "nearest_arc_hits": 492,
+      "candidate_miss_rate": 0.006673021925643452,
+      "alignment_distance_m_p50": 4.740787685695984,
+      "alignment_distance_m_p95": 18.83867224847716,
+      "alignment_distance_over_50m": 0
+    },
+    {
+      "trip_id": "00000040",
+      "observations": 2995,
+      "nodes": 12945,
+      "arcs": 27026,
+      "reference_arcs": 309,
+      "raw_file_bytes": {
+        "track": 97728,
+        "nodes": 258900,
+        "arcs": 277927,
+        "route": 1506
+      },
+      "gps_min_lon_lat": [
+        61.069448,
+        55.175283
+      ],
+      "gps_max_lon_lat": [
+        61.292663,
+        55.416496
+      ],
+      "weak_components": 15,
+      "isolated_nodes": 0,
+      "zero_length_arcs": 0,
+      "noncontiguous_reference_hops": 0,
+      "gps_blocks": 1,
+      "max_gap_seconds": 1.0,
+      "one_second_steps": 2994,
+      "candidate_hits": 2995,
+      "nearest_arc_hits": 1666,
+      "candidate_miss_rate": 0.0,
+      "alignment_distance_m_p50": 4.905944620614335,
+      "alignment_distance_m_p95": 14.911611658855538,
+      "alignment_distance_over_50m": 0
+    },
+    {
+      "trip_id": "00000052",
+      "observations": 262,
+      "nodes": 1770,
+      "arcs": 3577,
+      "reference_arcs": 95,
+      "raw_file_bytes": {
+        "track": 8278,
+        "nodes": 35400,
+        "arcs": 30902,
+        "route": 474
+      },
+      "gps_min_lon_lat": [
+        35.858383,
+        56.795125
+      ],
+      "gps_max_lon_lat": [
+        35.896431,
+        56.827472
+      ],
+      "weak_components": 7,
+      "isolated_nodes": 0,
+      "zero_length_arcs": 0,
+      "noncontiguous_reference_hops": 0,
+      "gps_blocks": 1,
+      "max_gap_seconds": 2.0,
+      "one_second_steps": 257,
+      "candidate_hits": 262,
+      "nearest_arc_hits": 209,
+      "candidate_miss_rate": 0.0,
+      "alignment_distance_m_p50": 4.167401198611158,
+      "alignment_distance_m_p95": 12.645028341499668,
+      "alignment_distance_over_50m": 0
+    },
+    {
+      "trip_id": "00000056",
+      "observations": 3958,
+      "nodes": 14759,
+      "arcs": 27631,
+      "reference_arcs": 1323,
+      "raw_file_bytes": {
+        "track": 133479,
+        "nodes": 309939,
+        "arcs": 288046,
+        "route": 7628
+      },
+      "gps_min_lon_lat": [
+        -93.424337,
+        44.836021
+      ],
+      "gps_max_lon_lat": [
+        -93.348525,
+        44.8734
+      ],
+      "weak_components": 24,
+      "isolated_nodes": 0,
+      "zero_length_arcs": 0,
+      "noncontiguous_reference_hops": 0,
+      "gps_blocks": 1,
+      "max_gap_seconds": 3.0,
+      "one_second_steps": 3916,
+      "candidate_hits": 3948,
+      "nearest_arc_hits": 2675,
+      "candidate_miss_rate": 0.002526528549772644,
+      "alignment_distance_m_p50": 4.786345294547667,
+      "alignment_distance_m_p95": 14.501945845613234,
+      "alignment_distance_over_50m": 27
+    },
+    {
+      "trip_id": "00000065",
+      "observations": 768,
+      "nodes": 6448,
+      "arcs": 13184,
+      "reference_arcs": 145,
+      "raw_file_bytes": {
+        "track": 24512,
+        "nodes": 128960,
+        "arcs": 128022,
+        "route": 701
+      },
+      "gps_min_lon_lat": [
+        49.263178,
+        53.512628
+      ],
+      "gps_max_lon_lat": [
+        49.329869,
+        53.53894
+      ],
+      "weak_components": 5,
+      "isolated_nodes": 0,
+      "zero_length_arcs": 0,
+      "noncontiguous_reference_hops": 0,
+      "gps_blocks": 2,
+      "max_gap_seconds": 210.0,
+      "one_second_steps": 756,
+      "candidate_hits": 768,
+      "nearest_arc_hits": 520,
+      "candidate_miss_rate": 0.0,
+      "alignment_distance_m_p50": 4.451516292133334,
+      "alignment_distance_m_p95": 11.897002550161789,
+      "alignment_distance_over_50m": 0
+    },
+    {
+      "trip_id": "00000076",
+      "observations": 1486,
+      "nodes": 26635,
+      "arcs": 56027,
+      "reference_arcs": 374,
+      "raw_file_bytes": {
+        "track": 48392,
+        "nodes": 532700,
+        "arcs": 624245,
+        "route": 2098
+      },
+      "gps_min_lon_lat": [
+        43.961393,
+        56.240407
+      ],
+      "gps_max_lon_lat": [
+        44.033831,
+        56.328848
+      ],
+      "weak_components": 40,
+      "isolated_nodes": 0,
+      "zero_length_arcs": 0,
+      "noncontiguous_reference_hops": 1,
+      "gps_blocks": 2,
+      "max_gap_seconds": 32.0,
+      "one_second_steps": 1279,
+      "candidate_hits": 1483,
+      "nearest_arc_hits": 629,
+      "candidate_miss_rate": 0.0020188425302826163,
+      "alignment_distance_m_p50": 6.823059902531195,
+      "alignment_distance_m_p95": 18.65702205474785,
+      "alignment_distance_over_50m": 0
+    },
+    {
+      "trip_id": "00000077",
+      "observations": 3911,
+      "nodes": 4424,
+      "arcs": 9622,
+      "reference_arcs": 268,
+      "raw_file_bytes": {
+        "track": 127956,
+        "nodes": 88480,
+        "arcs": 91058,
+        "route": 1258
+      },
+      "gps_min_lon_lat": [
+        50.788938,
+        61.639754
+      ],
+      "gps_max_lon_lat": [
+        50.841452,
+        61.69959
+      ],
+      "weak_components": 11,
+      "isolated_nodes": 0,
+      "zero_length_arcs": 2,
+      "noncontiguous_reference_hops": 0,
+      "gps_blocks": 1,
+      "max_gap_seconds": 1.0,
+      "one_second_steps": 3910,
+      "candidate_hits": 3911,
+      "nearest_arc_hits": 1701,
+      "candidate_miss_rate": 0.0,
+      "alignment_distance_m_p50": 6.115935754659653,
+      "alignment_distance_m_p95": 18.424541548362036,
+      "alignment_distance_over_50m": 0
+    },
+    {
+      "trip_id": "00000091",
+      "observations": 874,
+      "nodes": 6360,
+      "arcs": 12303,
+      "reference_arcs": 232,
+      "raw_file_bytes": {
+        "track": 26986,
+        "nodes": 120840,
+        "arcs": 119276,
+        "route": 1095
+      },
+      "gps_min_lon_lat": [
+        2.411206,
+        47.053146
+      ],
+      "gps_max_lon_lat": [
+        2.443703,
+        47.099623
+      ],
+      "weak_components": 11,
+      "isolated_nodes": 0,
+      "zero_length_arcs": 2,
+      "noncontiguous_reference_hops": 0,
+      "gps_blocks": 1,
+      "max_gap_seconds": 1.0,
+      "one_second_steps": 873,
+      "candidate_hits": 874,
+      "nearest_arc_hits": 503,
+      "candidate_miss_rate": 0.0,
+      "alignment_distance_m_p50": 4.385653719382573,
+      "alignment_distance_m_p95": 12.481612503155242,
+      "alignment_distance_over_50m": 0
+    }
+  ]
+}
