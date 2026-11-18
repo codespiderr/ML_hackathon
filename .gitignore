@@ -28,5 +28,9 @@ extracted_guidelines.txt
 self/
 *.zip
 
+# Supplied trip data and generated candidate archives
+Student folder/
+results/preprocessing/**/*.npz
+
 # Keep models directory structure but exclude excessively large temporary weights
 saved_models/*.tmp

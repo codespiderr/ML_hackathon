@@ -22,7 +22,7 @@ RANDOM_SEED = 42
 
 # Spatial & Candidate Generation Parameters
 SEARCH_RADIUS_METERS = 75.0  # Search radius around GPS observation for candidate arcs
-TOP_K_CANDIDATES = 10        # Max candidate road arcs per GPS observation
+TOP_K_CANDIDATES = 12        # Provisional count used for the preprocessing baseline
 METERS_PER_DEGREE_LAT = 111320.0  # Approx meters per degree latitude at ~49-50 deg N
 
 # HMM Parameters

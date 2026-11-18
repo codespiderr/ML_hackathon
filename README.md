@@ -8,8 +8,8 @@ End-to-end Machine Learning and Hidden Markov Model (HMM) system for matching no
 GPS tracking signals in urban canyons suffer from multipath reflection, building shadows, sensor noise, and variable sampling intervals. Consequently, recorded coordinates frequently deviate onto adjacent streets, jump across intersections, or deviate into buildings.
 
 **PathSnap** tackles this challenge using:
-1. **Spatial & Road Network Indexing**: Fast candidate segment retrieval using KD-Trees / Spatial indices.
-2. **Feature Engineering**: Multi-faceted geometric, bearing/heading, kinematic, and topological features.
+1. **Spatial & Road Network Indexing**: Exact nearest-segment lookup using a spatial grid.
+2. **Feature Engineering**: Distance, heading agreement, speed, and position along the road segment.
 3. **Multi-Model Machine Learning Benchmark**: Supervised classification comparing $\ge 5$ model families (Logistic Regression, Random Forest, Extra Trees, HistGradientBoosting, MLP / KNN).
 4. **Bayesian Hyperparameter Optimisation**: Group-aware cross-validated hyperparameter tuning using Optuna.
 5. **HMM & Viterbi Sequential Decoding**: Global trajectory optimization enforcing network road connectivity and distance plausibility.
@@ -31,11 +31,12 @@ GPS tracking signals in urban canyons suffer from multipath reflection, building
 ├── src/                           # Core algorithms & pipeline
 │   ├── config.py                  # Global configurations, hyperparams & paths
 │   ├── data_processing/           # Trajectory & road-network graph ingestion
-│   │   ├── loader.py              # Parses .track, .nodes, .arcs, .route
-│   │   ├── spatial_utils.py       # Metric projection & geometric distance utilities
-│   │   └── road_network.py        # NetworkX graph representation & arc indices
+│   │   ├── loader.py              # Parses .track, .nodes, and .arcs
+│   │   ├── labels.py              # Reads .route and aligns it to GPS observations
+│   │   ├── prepare.py             # Writes candidate arrays and EDA summaries
+│   │   └── spatial_utils.py       # Local metric projection and segment geometry
 │   ├── features/                  # Candidate generation & feature extraction
-│   │   ├── candidate_gen.py       # Spatial KDTree candidate arc generator
+│   │   ├── candidate_gen.py       # Indexed nearest-segment search
 │   │   └── feature_extractor.py   # Distance, heading error, speed, projection features
 │   ├── models/                    # Model training, evaluation & tuning
 │   │   ├── train_models.py        # Trains 5+ distinct algorithm families
@@ -68,10 +69,18 @@ pip install -r requirements.txt
 ```
 
 ### Execution Pipeline
-1. **Exploratory Data Analysis**:
+1. **Preprocess the supplied development trips**:
    ```bash
-   python -m src.visualization.eda_plots
+   python -m src.data_processing.prepare
    ```
+   The default input is `Student folder/Student folder` inside this checkout.
+   Use `--data` to point at another copy. Each split writes one candidate archive
+   per trip and a JSON summary under `results/preprocessing/`. For a quick check:
+   ```powershell
+   python -m src.data_processing.prepare --data "../Student folder/Student folder" --split train --trip 00000001
+   ```
+   See [the preprocessing handoff](docs/preprocessing.md) for file shapes and
+   alignment assumptions. The following stages are planned in the repository scaffold.
 2. **Model Training & Comparison (5+ Models)**:
    ```bash
    python -m src.models.train_models
