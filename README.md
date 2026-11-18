@@ -1,5 +1,9 @@
 # PathSnap: Distributed Map-Matching & Route Reconstruction
 
+The working FastAPI server and Streamlit client are documented in
+[docs/deployment.md](docs/deployment.md). This includes separate-device setup,
+the evaluator data location, API endpoints, and integration checks.
+
 End-to-end Machine Learning and Hidden Markov Model (HMM) system for matching noisy GPS trajectory observations to road networks and reconstructing true vehicle paths.
 
 ---

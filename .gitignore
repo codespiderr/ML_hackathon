@@ -40,3 +40,9 @@ self/
 
 # Keep models directory structure but exclude excessively large temporary weights
 saved_models/*.tmp
+
+# Reserved evaluator inputs remain local to the scoring server
+/results/evaluator_test/data/
+/results/evaluator_test/partial_results.json
+# Discarded exploratory candidate is not a deployment artifact
+/results/train_only_improvement/
